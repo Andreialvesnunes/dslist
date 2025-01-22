@@ -20,26 +20,30 @@ public class Game {
 	@Column(name = "game_year")
 	private Integer year;
 	private String genre;
-	private String plataform;
+	private String plataforms;
+	private Double score;
 	private String imageUrl;
+	@Column(columnDefinition = "TEXT")
 	private String shorDescription;
+	@Column(columnDefinition = "TEXT")
 	private String longDescription;
 	
 	public Game() {
 		
 	}
 
-	public Game(Long id, String title, Integer year, String genre, String plataform, String imageUrl,
-			String shorDescription, String longDescription) {
+	public Game(Long id, String title, Integer year, String genre, String plataforms, String imageUrl,
+			String shorDescription, String longDescription, Double score) {
 		super();
 		this.id = id;
 		this.title = title;
 		this.year = year;
 		this.genre = genre;
-		this.plataform = plataform;
+		this.plataforms = plataforms;
 		this.imageUrl = imageUrl;
 		this.shorDescription = shorDescription;
 		this.longDescription = longDescription;
+		this.score = score;
 	}
 
 	public Long getId() {
@@ -75,11 +79,11 @@ public class Game {
 	}
 
 	public String getPlataform() {
-		return plataform;
+		return plataforms;
 	}
 
-	public void setPlataform(String plataform) {
-		this.plataform = plataform;
+	public void setPlataform(String plataforms) {
+		this.plataforms = plataforms;
 	}
 
 	public String getImageUrl() {
@@ -104,6 +108,14 @@ public class Game {
 
 	public void setLongDescription(String longDescription) {
 		this.longDescription = longDescription;
+	}
+
+	public Double getScore() {
+		return score;
+	}
+
+	public void setScore(Double score) {
+		this.score = score;
 	}
 
 	@Override
