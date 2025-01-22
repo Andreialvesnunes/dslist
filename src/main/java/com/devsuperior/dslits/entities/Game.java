@@ -20,29 +20,29 @@ public class Game {
 	@Column(name = "game_year")
 	private Integer year;
 	private String genre;
-	private String plataforms;
+	private String platforms;
 	private Double score;
-	private String imageUrl;
+	private String img_url;
 	@Column(columnDefinition = "TEXT")
-	private String shorDescription;
+	private String short_description;
 	@Column(columnDefinition = "TEXT")
-	private String longDescription;
+	private String long_description;
 	
 	public Game() {
 		
 	}
 
-	public Game(Long id, String title, Integer year, String genre, String plataforms, String imageUrl,
-			String shorDescription, String longDescription, Double score) {
+	public Game(Long id, String title, Integer year, String genre, String platforms, String img_url,
+			String short_description, String long_description, Double score) {
 		super();
 		this.id = id;
 		this.title = title;
 		this.year = year;
 		this.genre = genre;
-		this.plataforms = plataforms;
-		this.imageUrl = imageUrl;
-		this.shorDescription = shorDescription;
-		this.longDescription = longDescription;
+		this.platforms = platforms;
+		this.img_url = img_url;
+		this.short_description = short_description;
+		this.long_description = long_description;
 		this.score = score;
 	}
 
@@ -79,35 +79,35 @@ public class Game {
 	}
 
 	public String getPlataform() {
-		return plataforms;
+		return platforms;
 	}
 
-	public void setPlataform(String plataforms) {
-		this.plataforms = plataforms;
+	public void setPlataform(String platforms) {
+		this.platforms = platforms;
 	}
 
 	public String getImageUrl() {
-		return imageUrl;
+		return img_url;
 	}
 
-	public void setImageUrl(String imageUrl) {
-		this.imageUrl = imageUrl;
+	public void setImageUrl(String img_url) {
+		this.img_url = img_url;
 	}
 
 	public String getShorDescription() {
-		return shorDescription;
+		return short_description;
 	}
 
 	public void setShorDescription(String shorDescription) {
-		this.shorDescription = shorDescription;
+		this.short_description = short_description;
 	}
 
 	public String getLongDescription() {
-		return longDescription;
+		return long_description;
 	}
 
 	public void setLongDescription(String longDescription) {
-		this.longDescription = longDescription;
+		this.long_description = longDescription;
 	}
 
 	public Double getScore() {
