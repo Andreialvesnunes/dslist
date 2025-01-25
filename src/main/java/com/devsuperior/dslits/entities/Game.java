@@ -98,7 +98,7 @@ public class Game {
 		return short_description;
 	}
 
-	public void setShorDescription(String shorDescription) {
+	public void setShorDescription(String short_description) {
 		this.short_description = short_description;
 	}
 
