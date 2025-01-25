@@ -1,6 +1,7 @@
 package com.devsuperior.dslits.dto;
 
 import com.devsuperior.dslits.entities.Game;
+import com.devsuperior.dslits.projections.GameMinProjection;
 
 public class GameMinDTO {
 	
@@ -10,12 +11,21 @@ public class GameMinDTO {
 	private String imgUrl;
 	private String shortDescription;
 	
+	
 	public GameMinDTO(Game entity) {
 		this.id = entity.getId();
 		this.title = entity.getTitle();
 		this.year = entity.getYear();
 		this.imgUrl = entity.getImageUrl();
 		this.shortDescription = entity.getShorDescription();
+	}
+	
+	public GameMinDTO(GameMinProjection projection) {
+		this.id = projection.getId();
+		this.title = projection.getTitle();
+		this.year = projection.getYear();
+		this.imgUrl = projection.getImgUrl();
+		this.shortDescription = projection.getShortDescription();
 	}
 
 	public Long getId() {
