@@ -14,6 +14,10 @@ public class Beloging {
 	private BelogingPK id;
 	private Integer position;
 	
+	
+	public Beloging() {
+		}
+
 	public Beloging(Game game, GameList list, Integer  position) {
 		id.setGame(game);
 		id.setList(list);
