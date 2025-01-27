@@ -21,11 +21,5 @@ public class ReplacementDTO {
         this.destinationIndex = destinationIndex;
     }
 
-    @Override
-    public String toString() {
-        return "ReplacementDTO{" +
-                "sourceIndex=" + sourceIndex +
-                ", destinationIndex=" + destinationIndex +
-                '}';
-    }
+ 
 }

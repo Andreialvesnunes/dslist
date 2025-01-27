@@ -39,14 +39,7 @@ public class GameListController {
 		return result;
 	}
 	@PostMapping(value = "/{listId}/replacement")
-	public ResponseEntity<Void> move(@PathVariable Long listId, @RequestBody ReplacementDTO body) {
-	    System.out.println("List ID: " + listId);
-	    System.out.println("Request Body: " + body);
-	    System.out.println("Source Index: " + body.getSourceIndex());
-	    System.out.println("Destination Index: " + body.getDestinationIndex());
-
+	public void move(@PathVariable Long listId, @RequestBody ReplacementDTO body) {
 	    gameListService.move(listId, body.getSourceIndex(), body.getDestinationIndex());
-
-	    return ResponseEntity.ok().build(); // Retorna 200 OK sem corpo
 	}
 }
